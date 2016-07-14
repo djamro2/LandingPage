@@ -47,6 +47,13 @@ Author:         Mat Przegietka
 	height: 3rem;
 }
 
+.logo_resize{
+	margin-top:-50px;
+	width: 20em;
+	height: 15em;
+	margin-bottom:15px;
+}
+
 #features{
 	text-align:center;
 }
