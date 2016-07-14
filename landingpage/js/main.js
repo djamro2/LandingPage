@@ -239,11 +239,11 @@ var App = { init: function() { App.HomepageHeight();           // helper script 
     // Screenshots Carousel
     Screenshots_Carousel: function() {
 	    $(".owl-carousel-screenshots").owlCarousel({
-			loop:true,
-		    items : 7,
-			itemsDesktop : [1200,7], 
-			itemsDesktopSmall : [900,6], 
-			itemsTablet: [600,4], 
+			loop: true,
+		    items : 3,
+			itemsDesktop : [1400,3],
+			itemsDesktopSmall : [1200,3],
+			itemsTablet: [600,3],
 			itemsMobile : [400,2]     
 	    });	
     },    

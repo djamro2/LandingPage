@@ -30,6 +30,29 @@ Author:         Mat Przegietka
 /* 0. Shiv Added Code -------------------*/
 /*--------------------------------------*/
 
+.img-container {
+	position: relative;
+	padding-top: 1rem; /* make space for text */
+	margin-top: -1rem; /* undo effect of padding */
+}
+
+.img-container span {
+	position: absolute;
+	top: 0;
+	left: .75rem;
+	/* pre-defined */
+	opacity: 0.64;
+	font-weight: 300;
+	font-size: 1rem;
+	letter-spacing: 0.02rem;
+	line-height: 1.72rem;
+	margin: 0px 0px 1.72rem 0px;
+}
+
+.hero-content-welcome-week {
+	margin-top: -22rem;
+}
+
 .opacity-fix {
 	opacity: inherit!important;
 }
@@ -58,78 +81,59 @@ Author:         Mat Przegietka
 	text-align:center;
 }
 
-#r1g{
+.event-row {
 	width:100%;
 	margin-top:10px;
 	margin-bottom:10px;
 }
 
-#r2g{
-	width:100%;
-	margin-top:10px;
-	margin-bottom:10px;
-}
-
-#r1g .col-md-3 img {
+.event-row .col-md-3 img {
 	width:99%;
 	margin:10px;
 }
 
-#r1g .col-md-3 a{
+.event-row .img-container button {
 	display:none;
+	position: absolute;
+	bottom: 20px;
+	width: 140px;
+	left: 50%;
+	margin-left: -70px;
 }
 
-#r1g .col-md-3 img:hover {
+.event-row .img-container:hover img {
 	opacity: .3;
 }
 
-#r1g .col-md-3:hover a{
-	display:block;
+.event-row .img-container:hover button {
+	display: block;
 }
 
-#r1g .col-md-3 input.btn {
+.event-row .col-md-3 input.btn {
 	width:50%;
 	height:50%;
 }
 
-#r2g .col-md-3 img {
+.event-row .col-md-3 img {
 	width:99%;
 	margin:10px;
 }
 
-#r2g .col-md-3 img:hover {
+.event-row .col-md-3 img:hover {
 	opacity: .3;
 }
 
-#r2g .col-md-3 input{
+.event-row .col-md-3 input{
 	position:absolute;
 	display:none;
 }
 
-#r2g .col-md-3 input.buyButton{
+.event-row .col-md-3 input.buyButton{
 	top:0;
 	left:0;
 }
 
-#r1g .col-md-3 .title{
-	height:20px;
-	margin-top:10px;
-	margin-bottom:10px;
-}
-
-#r2g .col-md-3 .title{
-	height:20px;
-	margin-top:10px;
-	margin-bottom:10px;
-}
-
-#r1g .col-md-3 .description{
-	height:20px;
-	margin-top:10px;
-	margin-bottom:10px;
-}
-
-#r2g .col-md-3 .description{
+.event-row .col-md-3 .title{
 	height:20px;
 	margin-top:10px;
 	margin-bottom:10px;
