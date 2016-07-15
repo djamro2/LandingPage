@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="DockSocial">
     <head>
 		<title>NYC - Welcome Week</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -7,7 +7,7 @@
 
 		<!-- Included Google Fonts -->
 		<link href='//fonts.googleapis.com/css?family=Roboto:400,900,700,500,300,100' rel='stylesheet' type='text/css'>
-    	<link rel="shortcut icon" href="/images/favicon.png"/>
+    	<link rel="shortcut icon" href="/images/favicon.jpg"/>
 
 	    <script>
 		    (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
@@ -36,9 +36,22 @@
 
 		<!-- Modernizer and IE specyfic files -->
 		<script src="landingpage/js/modernizr.custom.js"></script>
+
+		<!-- angular dependencies -->
+		<script type="text/javascript" src="js/angular/angular.min.js"></script>
+		<script type="text/javascript" src="js/angular/angular-route.min.js"></script>
+		<script type="text/javascript" src="js/angular/angular-resource.min.js"></script>
+
+		<!-- angular code -->
+		<script type="text/javascript" src="app/app.js"></script>
+		<script type="text/javascript" src="app/controllers/LandingPageController.js"></script>
+
+		<!-- Parse -->
+		<script type="text/javascript" src="js/parse.js"></script>
+
     </head>
 
-  	<body>
+  	<body ng-controller="LandingPageController">
 
 		<!-- Mobile nav -->
     	<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
@@ -95,7 +108,7 @@
 				<!-- //Logo and navigation -->
 
 				<!-- Main content -->
-		  		<div class="container align-center" id="main_content">
+		  		<div class="container align-center margin-auto" id="main_content">
 					<div class="content_container row" >
 						<div class="col-xs-12 col-sm-12 hero-content-welcome-week">
 							<h2 class="slogan">NYC Welcome Week 2016</h2>
@@ -110,7 +123,9 @@
 										<div class="col-sm-3"></div>
 										<div class="col-sm-3">
 											<div>
-												<button class="btn waves-effect waves-light subscribe-submit">Get Tickets!</button>
+												<a href="#getTickets" class="opacity-fix">
+													<button class="btn waves-effect waves-light subscribe-submit">Get Tickets!</button>
+												</a>
 											</div>
 										</div>
 										<div class="col-sm-3">
@@ -139,9 +154,8 @@
 			</div>
 
 			<!-- Single Image Background -->
-
 			<div id="maximage_single" class="darkerJumbotron">
-				<img src="images/nycWelcomeWeekBackground4.jpeg" alt=""/>
+				<img src="images/nycWelcomeWeekBackground4.jpeg" class="dark-transparent" alt=""/>
 			</div>
 
 			<!-- //Single Image Background -->
@@ -333,16 +347,18 @@
 				</div>
 			</div>
 			-->
+
 		<section id="getTickets" class="subsection getTicketesBackground">
 				<div class="container">
 					<div class="row getTickets">
 						<H1>Get Involved</H1>
 					</div>
-					<div class="row">
-							<button class="btn waves-effect waves-light subscribe-submit">Week Long Tickets</button>
+					<div class="row align-center">
+						<button class="btn waves-effect waves-light subscribe-submit">Week Long Tickets</button>
 					</div>
 				</div>
 		</section>
+
 		<!-- Screenshots #################### -->
 		<section id="screenshots" class="subsection ">
 			<div class="container">
@@ -384,73 +400,67 @@
 		<section id="hired" class="subsection">
 			<div class="container">
 				<div class="row getHired">
-					<H1>Get Hired</H1>
-					</div>
-				<div class="row">
-					<div class="col-md-4">
-						<button class="btn waves-effect waves-light subscribe-submit">Promoters</button>
-
-					</div>
-					<div class="col-md-4">
-						<button class="btn waves-effect waves-light subscribe-submit">Street Team</button>
-
-					</div>
-					<div class="col-md-4">
-						<button class="btn waves-effect waves-light subscribe-submit">Promotional Models </button>
-					</div>
-
-
-
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<button class="btn waves-effect waves-light subscribe-submit">Photographers</button>
-
-					</div>
-					<div class="col-md-4">
-						<button class="btn waves-effect waves-light subscribe-submit">Graphic Designers</button>
-
-					</div>
-					<div class="col-md-4">
-						<button class="btn waves-effect waves-light subscribe-submit">Disk Jockeys</button>
-
-					</div>
+					<h1>Get Hired</h1>
 				</div>
 
-					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
-					<h3>Positions</h3>
+				<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
 
-						<h5>Promoters </h5>
-						<p>Are you the life of the party? A socially outgoing student who
-							wants to have an amazing time partying AND get paid to bring people
-							to the parties? If you've got the networking and partying skills then
-							this is the job for you! Payment is on a per-head-basis!
+					<div class="positions-dropdown-row">
+						<span class="positions-label">Positions:</span>
+						<select ng-model="positionSelected">
+							<option value="promoters">Promoters</option>
+							<option value="streetTeam">Street Team</option>
+							<option value="promotionalModels">Promotional Models</option>
+							<option value="photographers">Photographers</option>
+							<option value="graphicDesigners">Graphic Designers</option>
+						</select>
+					</div>
+
+						<span ng-if="positionSelected === 'promoters'">
+							<h5>Promoters </h5>
+							<p>Are you the life of the party? A socially outgoing student who
+								wants to have an amazing time partying AND get paid to bring people
+								to the parties? If you've got the networking and partying skills then
+								this is the job for you! Payment is on a per-head-basis!
 							</p>
-						<h5>Street Team </h5>
-						<p>Are you a friendly and socially outgoing student who would like to
-							distribute promotional materials around college campuses? It's an
-							easy and fun way to meet new people and get paid hourly for it!
+						</span>
+
+						<span ng-if="positionSelected === 'streetTeam'">
+							<h5>Street Team </h5>
+							<p>Are you a friendly and socially outgoing student who would like to
+								distribute promotional materials around college campuses? It's an
+								easy and fun way to meet new people and get paid hourly for it!
 							</p>
-						<h5>Promotional Models </h5>
+						</span>
+
+						<span ng-if="positionSelected === 'promotionalModels'">
+							<h5>Promotional Models </h5>
 							<p>Are you tall and beautiful? Do you have modeling experience?
 								Or have you been told that you could be a model? Now is your chance!
 								Our models help our street team, participate in photo shoots for flyers,
 								and get to party for free whenever they want!! Please include two or three pictures
 								if you are applying for this position.
 							</p>
-						<h5>c</h5>
-						<p>Do you live behind your camera? We need photographers who can take pictures of our
-							insanely crazy welcome week parties and our super hot models!! Please include up to
-							five samples of your photography if you are applying for this position.
+						</span>
+
+						<span ng-if="positionSelected === 'photographers'">
+							<h5>Photographers</h5>
+							<p>Do you live behind your camera? We need photographers who can take pictures of our
+								insanely crazy welcome week parties and our super hot models!! Please include up to
+								five samples of your photography if you are applying for this position.
 							</p>
-						<h5>Graphic Designers</h5>
-						<p>
-							Can you design flyers for the sickest parties ever?
-							Thousands of these flyers will be distributed around NYC during welcome week!
-							Please create a sample flyer for a party to include if you are applying for this
-							position (please include the following information on the flyer: a celebrity guest/performer
-							, drink specials, date, time, address, etc. - Be creative and impress us!!)
-						</p>
+						</span>
+
+						<span ng-if="positionSelected === 'graphicDesigners'">
+							<h5>Graphic Designers</h5>
+							<p>
+								Can you design flyers for the sickest parties ever?
+								Thousands of these flyers will be distributed around NYC during welcome week!
+								Please create a sample flyer for a party to include if you are applying for this
+								position (please include the following information on the flyer: a celebrity guest/performer
+								, drink specials, date, time, address, etc. - Be creative and impress us!!)
+							</p>
+						</span>
 
 					</div>
 
