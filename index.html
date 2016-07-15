@@ -7,7 +7,7 @@
 
 		<!-- Included Google Fonts -->
 		<link href='//fonts.googleapis.com/css?family=Roboto:400,900,700,500,300,100' rel='stylesheet' type='text/css'>
-    	<link rel="shortcut icon" href="/images/favicon.jpg"/>
+    	<link rel="shortcut icon" href="images/favicon.jpg"/>
 
 	    <script>
 		    (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
@@ -62,10 +62,10 @@
 				</a>
 			</div>
         	<nav id="mobile_menu_content">
-            	<a href="#more_info">About Us</a>
-				<a href="#features">Events</a>
-        		<a href="#reviews">Get Hired</a>
-            	<a href="#contact">Get Tickets</a>
+            	<a href="#more_info">ABOUT US</a>
+				<a href="#features">EVENTS</a>
+        		<a href="#reviews">GET HIRED</a>
+            	<a href="#getTickets">GET TICKETS</a>
 			</nav>
     	</div>
     	<!-- //Mobile nav -->
@@ -94,11 +94,11 @@
 							<img src="images/welcomeWeekLogo.jpg" alt="logo" class="logo welcome-week-logo" />
 		  					<nav class="navigation_desktop">
 								<ul class="top-align">
-									<li class="top-align-sm"><div data-icon="&#xe36c;" class="social_icon twitter_icon" onclick="location.href='#'"></div></li>
-									<li class="top-align-sm"><div data-icon="&#xe281;" class="social_icon facebook_icon" onclick="location.href='#'"></div></li>
-									<li><a href="#more_info" class="visible-lg visible-md go_to_overview">About Us</a></li>
-									<li><a href="#events" class="visible-lg visible-md">Events</a></li>
-									<li><a href="#hired" class="visible-lg visible-md">Get Hired</a></li>
+									<li class="top-align-sm visible-lg visible-md"><div data-icon="&#xe36c;" class="social_icon twitter_icon" onclick="location.href='#'"></div></li>
+									<li class="top-align-sm visible-lg visible-md"><div data-icon="&#xe281;" class="social_icon facebook_icon" onclick="location.href='#'"></div></li>
+									<li><a href="#more_info" class="visible-lg visible-md go_to_overview">ABOUT US</a></li>
+									<li><a href="#events" class="visible-lg visible-md">EVENTS</a></li>
+									<li><a href="#hired" class="visible-lg visible-md">GET HIRED</a></li>
 									<li><div class="mobile_nav_open_button hidden-lg hidden-md"  ><a href="" id="showRight_1" ><div data-icon="&#xe2f3;" class="button_icon close_icon"></div></a></div></li>
 								</ul>
 							</nav>
@@ -169,13 +169,15 @@
 				<a href="" class="go_to_home logo_light"><img src="images/welcomeWeekLogo.jpg" alt="logo" class="logo welcome-week-logo"/></a>
 				<nav class="menu_bar_navigation">
 	  				<ul>
-						<li class="top-align-sm"><div data-icon="&#xe36c;" class="social_icon twitter_icon" onclick="location.href='#'"></div></li>
-						<li class="top-align-sm"><div data-icon="&#xe281;" class="social_icon facebook_icon" onclick="location.href='#'"></div></li>
-	  					<li class="visible-lg visible-md"><a href="#more_info" class="go_to_overview" >About Us</a></li>
-	  					<li class="visible-lg visible-md"><a href="#features">Events</a></li>
-	  					<li class="visible-lg visible-md"><a href="#reviews">Get Hired</a></li>
+						<li class="top-align-md visible-lg visible-md"><div data-icon="&#xe36c;" class="social_icon twitter_icon" onclick="location.href='#'"></div></li>
+						<li class="top-align-md visible-lg visible-md"><div data-icon="&#xe281;" class="social_icon facebook_icon" onclick="location.href='#'"></div></li>
+	  					<li class="visible-lg visible-md"><a href="#more_info" class="go_to_overview">ABOUT US</a></li>
+	  					<li class="visible-lg visible-md"><a href="#features">EVENTS</a></li>
+	  					<li class="visible-lg visible-md"><a href="#reviews">GET HIRED</a></li>
 	  					<li class="visible-lg visible-md last-item">
-							<button class="btn waves-effect waves-light subscribe-submit">Get Tickets!</button>
+							<a href="#getTickets" class="opacity-fix">
+								<button class="btn waves-effect waves-light subscribe-submit">Get Tickets!</button>
+							</a>
 						</li>
 	  					<li class="hidden-lg hidden-md">
 							<div class="mobile_nav_open_button">
@@ -348,10 +350,10 @@
 			</div>
 			-->
 
-		<section id="getTickets" class="subsection getTicketesBackground">
+		<section id="getTickets" class="subsection get-involved">
 				<div class="container">
 					<div class="row getTickets">
-						<H1>Get Involved</H1>
+						<h1>GET INVOLVED</h1>
 					</div>
 					<div class="row align-center">
 						<button class="btn waves-effect waves-light subscribe-submit">Week Long Tickets</button>
@@ -469,29 +471,30 @@
 						<p>Send us an email if you have any questions</p>
 
 						<!-- Contact Form -->
-						<form action="php/contactform.php" id="contact-form" method="post">
+						<form id="contact-form" ng-submit="saveApplication(application)">
 							<div class="contact_form">
 								<div class="input-field">
-					  				<input id="first_name" type="email" name="contact-name">
+					  				<input id="first_name" type="text" name="contact-name" ng-model="application.name" required>
 					  				<label for="first_name">Your Name</label>
 					  			</div>
 								<div class="input-field">
-									<input id="College" type="email" name="contact-name">
+									<input id="College" type="text" name="contact-college" ng-model="application.college" required>
 									<label for="first_name">College</label>
 								</div>
 					  			<div class="input-field">
-					  				<input id="contact_email" type="email" name="contact-email">
+					  				<input id="contact_email" type="email" name="contact-email" ng-model="application.email" required>
 					  				<label for="contact_email">Email Address</label>
 					  			</div>
 								<div class="input-field">
-									<input id="cellPhone" type="email" name="contact-email">
+									<input id="cellPhone" type="text" name="contact-email" ng-model="application.phoneNumber" required>
 									<label for="contact_email">Cell Phone Number</label>
 								</div>
 					  			<div class="input-field">
-						  			<textarea class="materialize-textarea" name="contact-message"></textarea>
+						  			<textarea class="materialize-textarea" name="contact-message" ng-model="application.info" required></textarea>
 						  			<label>Brief Explanation of why you are a good fit!</label>
 						  		</div>
 				  			</div>
+							<p ng-if="applicationSent" class="application-sent">Application sent!</p>
 				  			<button class="btn waves-effect waves-light" type="submit" name="action">Send</button>
 						</form>
 						<!-- //Contact Form -->
@@ -506,9 +509,7 @@
 			<div class="container">
 				<div class="row text-center">
 					<H1>Sponsors</H1>
-
 				</div>
-
 			</div>
 		</section><!-- //More info -->
 

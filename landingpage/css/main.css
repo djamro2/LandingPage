@@ -30,12 +30,38 @@ Author:         Mat Przegietka
 /* 0. Shiv Added Code -------------------*/
 /*--------------------------------------*/
 
+section.get-involved {
+	background: #222;
+	color: white;
+	padding-bottom: 3rem;
+}
+
+section.get-involved h1 {
+	font-size: 3rem;
+	letter-spacing: .3rem;
+	opacity: 1;
+}
+
+body {
+	font-family: Dosis, arial, sans-serif!important;
+}
+
+.spacing {
+	letter-spacing: .5em!important;
+}
+
+.application-sent {
+	color: royalblue;
+	font-weight: 600;
+}
+
 .margin-auto {
 	margin: auto!important;
 }
 
 .positions-dropdown-row {
 	display: flex;
+	align-items: center;
 }
 
 .positions-dropdown-row select {
@@ -45,7 +71,6 @@ Author:         Mat Przegietka
 .positions-label {
 	font-size: 2rem;
 	padding-right: 1rem;
-	padding-top:1px;
 }
 
 .relative {
@@ -63,7 +88,7 @@ Author:         Mat Przegietka
 }
 
 .aboutUs{
-  margin-top:-4em;
+    margin-top:-2em;
     margin-bottom:-1em;
 }
 
@@ -128,6 +153,10 @@ Author:         Mat Przegietka
 
 .top-align-sm {
 	margin-top: .3rem;
+}
+
+.top-align-md {
+	margin-top: .5rem;
 }
 
 .welcome-week-logo {
