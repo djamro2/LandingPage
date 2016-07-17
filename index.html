@@ -111,7 +111,7 @@
 		  		<div class="container align-center margin-auto" id="main_content">
 					<div class="content_container row" >
 						<div class="col-xs-12 col-sm-12 hero-content-welcome-week">
-							<h2 class="slogan">NYC WELCOME WEEK</h2>
+							<h2 class="slogan spacing-sm">NYC WELCOME WEEK</h2>
 
 
 							<!-- CTA Buttons-->
@@ -201,7 +201,7 @@
 			<div class="container">
 				<div class="row aboutUs">
 					<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 align-center content_anim1 intro aboutUs">
-						<h2>Welcome Week 2016</h2>
+						<h2 class="all-caps spacing-sm fs-md">Welcome Week 2016</h2>
 						<p>
 							Welcome week is a weeklong party. There is a party every night and no class the next day!
 							This orientation period has been a tradition for new and returning students alike to
@@ -355,7 +355,7 @@
 		<section id="getTickets" class="subsection get-involved">
 				<div class="container">
 					<div class="row getTickets">
-						<h1>GET INVOLVED</h1>
+						<h1 class="all-caps fs-md spacing-md">Get Involved</h1>
 					</div>
 					<div class="row align-center">
 						<button class="btn waves-effect waves-light subscribe-submit">Week Long Tickets</button>
@@ -369,7 +369,7 @@
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-center screenShots">
 						<div class="intro content_anim25">
-							<h1>Have a look!</h1>
+							<h1 class="spacing-md fs-md all-caps">HAVE A LOOK!</h1>
 							<h3>Pictures from Welcome Week 2015</h3>
 						</div>
 					</div>
@@ -388,12 +388,12 @@
 			</div>
 			<div class="content_anim26" id="screenshots_gallery2 screenShots3">
 				<div class="owl-carousel-screenshots" >
+					<div><a href="images/WelcomeWeekGallery/image8.jpg" data-lightbox-gallery="gallery1" ><img src="images/WelcomeWeekGallery/image8.jpg" class="shadow" alt=""></a></div>
 					<div><a href="images/WelcomeWeekGallery/image1.jpg" data-lightbox-gallery="gallery1" ><img src="images/WelcomeWeekGallery/image1.jpg" class="shadow" alt=""></a></div>
 					<div><a href="images/WelcomeWeekGallery/image3.jpg" data-lightbox-gallery="gallery1" ><img src="images/WelcomeWeekGallery/image3.jpg" class="shadow" alt=""></a></div>
 					<div><a href="images/WelcomeWeekGallery/image4.jpg" data-lightbox-gallery="gallery1" ><img src="images/WelcomeWeekGallery/image4.jpg" class="shadow" alt=""></a></div>
 					<div><a href="images/WelcomeWeekGallery/image5.jpg" data-lightbox-gallery="gallery1" ><img src="images/WelcomeWeekGallery/image5.jpg" class="shadow" alt=""></a></div>
 					<div><a href="images/WelcomeWeekGallery/image6.jpg" data-lightbox-gallery="gallery1" ><img src="images/WelcomeWeekGallery/image6.jpg" class="shadow" alt=""></a></div>
-					<div><a href="images/WelcomeWeekGallery/image8.jpg" data-lightbox-gallery="gallery1" ><img src="images/WelcomeWeekGallery/image8.jpg" class="shadow" alt=""></a></div>
 				</div>
 			</div>
 
@@ -404,7 +404,7 @@
 		<section id="hired" class="subsection">
 			<div class="container">
 				<div class="row getHired">
-					<h1>Get Hired</h1>
+					<h1 class="fs-md spacing-sm all-caps">Get Hired</h1>
 				</div>
 
 				<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
@@ -418,7 +418,7 @@
 							<option value="photographers">Photographers</option>
 							<option value="graphicDesigners">Graphic Designers</option>
 							<option value="brandAmbassador">Brand Ambassador</option>
-							<option value="socialMediaStar">Social Meida Star</option>
+							<option value="socialMediaStar">Social Media Star</option>
 						</select>
 					</div>
 
@@ -483,12 +483,24 @@
 					</div>
 
 					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
-						<h3>Submit Your Application!</h3>
+						<h3 class="no-margin-top">Submit Your Application!</h3>
 						<p>Send us an email if you have any questions</p>
 
 						<!-- Contact Form -->
 						<form id="contact-form" ng-submit="saveApplication(application)">
 							<div class="contact_form">
+								<div class="select-row">
+									<span>Position:</span>
+									<select ng-model="application.position" required>
+										<option value="Promoter">Promoter</option>
+										<option value="Street Team">Street Team</option>
+										<option value="Promotional Model">Promotional Model</option>
+										<option value="Photographers">Photographer</option>
+										<option value="Graphic Designers">Graphic Designer</option>
+										<option value="Brand Ambassador">Brand Ambassador</option>
+										<option value="Social Media Star">Social Media Star</option>
+									</select>
+								</div>
 								<div class="input-field">
 					  				<input id="first_name" type="text" name="contact-name" ng-model="application.name" required>
 					  				<label for="first_name">Your Name</label>

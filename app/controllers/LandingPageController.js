@@ -31,6 +31,7 @@ app.controller('LandingPageController', ['$scope', '$window', function($scope, $
         application.set("Email", form.email);
         application.set("PhoneNumber", form.phoneNumber);
         application.set("Info", form.info);
+        application.set("Position", form.position);
 
         application.save({
             success: function(result) {
