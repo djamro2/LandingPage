@@ -271,6 +271,23 @@ body {
 	margin-bottom:10px;
 }
 
+section .sponsors{
+	background: #222;
+	color: white;
+	margin-top:-2em;
+	padding-bottom: 3rem;
+}
+
+.sponsors{
+	text-align:center;
+}
+
+.footer{
+	margin-top:3em;
+}
+
+
+
 /*--------------------------------------*/
 /* 1. Helper Classes -------------------*/
 /*--------------------------------------*/
