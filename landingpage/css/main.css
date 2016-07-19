@@ -30,6 +30,19 @@ Author:         Mat Przegietka
 /* 0. Shiv Added Code -------------------*/
 /*--------------------------------------*/
 
+.brighterWords{
+	color:white;
+	font-size:4em;
+}
+.jumbo{
+	margin-top: 15em;
+
+}
+
+.jumbotronButtons{
+	margin-top:5em;
+}
+
 .no-margin-top {
 	margin-top: 0!important;
 }
