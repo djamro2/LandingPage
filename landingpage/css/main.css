@@ -30,10 +30,38 @@ Author:         Mat Przegietka
 /* 0. Shiv Added Code -------------------*/
 /*--------------------------------------*/
 
+#screenshots {
+	border-bottom: 1px solid #999!important;
+}
+
+.width-200 {
+	width: 200px;
+}
+
+#hired {
+	padding-top: 0!important;
+}
+
+.video-item {
+	text-align: center;
+	padding-top: 2.5rem;
+}
+
+.black-words {
+	color: #000000;
+	opacity: 1!important;
+}
+
+.white-words {
+	color: #ffffff;
+	opacity: 1!important;
+}
+
 .brighterWords{
 	color:white;
 	font-size:4em;
 }
+
 .jumbo{
 	margin-top: 15em;
 
@@ -191,7 +219,7 @@ body {
 }
 
 .hero-content-welcome-week {
-	margin-top: -20em;
+	margin-top: -15em;
 }
 
 .opacity-fix {
