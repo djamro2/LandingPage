@@ -6,7 +6,9 @@ app.controller('LandingPageController', ['$scope', '$window', function($scope, $
     var vm = this;
     $scope.positionSelected = 'promoters';
     $scope.application = {};
+
     $scope.applicationSent = false;
+    $scope.applicationInProgress = false;
 
     // this function is called on start up, get the necessary data here
     vm.init = function(){
@@ -23,6 +25,12 @@ app.controller('LandingPageController', ['$scope', '$window', function($scope, $
 
     // save the users application, call cloud code function to send the email
     $scope.saveApplication = function(form) {
+
+        if ($scope.applicationInProgress || $scope.applicationSent) {
+            return;
+        }
+        $scope.applicationInProgress = true;
+
         var Application = Parse.Object.extend("Application");
         var application = new Application();
 
@@ -39,6 +47,7 @@ app.controller('LandingPageController', ['$scope', '$window', function($scope, $
                     success: function(result) {
                         $scope.applicationSent = true;
                         $scope.applicationError = false;
+                        $scope.applicationInProgress = false;
                         $scope.$apply();
                     },
                     error: function(error) {
