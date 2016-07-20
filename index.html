@@ -138,22 +138,22 @@
 							<div class="cta_button_area">
 								<div class="container">
 									<div class="row jumbotronButtons">
-										<div class="col-sm-3"></div>
-										<div class="col-sm-3">
+										<div class="col-sm-2"></div>
+										<div class="col-sm-4">
 											<div>
 												<a href="#getTickets" class="opacity-fix">
 													<button class="btn waves-effect waves-light subscribe-submit width-200">Get Tickets!</button>
 												</a>
 											</div>
 										</div>
-										<div class="col-sm-3">
+										<div class="col-sm-4">
 											<div>
 												<a href="#hired" class="opacity-fix">
 													<button class="btn waves-effect waves-light subscribe-submit width-200">  Get Hired </button>
 												</a>
 											</div>
 										</div>
-										<div class="col-sm-3"></div>
+										<div class="col-sm-2"></div>
 									</div>
 
 									<!-- countdown
@@ -652,11 +652,17 @@
 				}
 			});
 
-			// start the countdown
-			$('#clock').flipcountdown({
-				size: 'sm',
-				beforeDateTime: '9/10/2016'
-			});
+			// scroll to element if in URL
+			var url = window.location.href,
+				element;
+			if (url && url.indexOf('#') > -1) {
+				element = url.split('#')[1];
+			}
+			if (element) {		
+			    $('html, body').animate({
+			        scrollTop: $("#" + element).offset().top
+			    }, 2000);
+			}
 		});
     </script>
 
