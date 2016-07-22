@@ -15,6 +15,10 @@ app.controller('LandingPageController', ['$scope', '$window', function($scope, $
         Parse.initialize("tkItk2kkSyvQtkyaRmImxGC6ZPNXYPZCenkvgbuQ", "teE9Ak1WfrKgp1Cyzyi5yKnUN45cVOWojmWr1h6O");
     };
 
+    $scope.linkTo = function(link) {
+        $window.location.href = link;
+    };
+
     // route the user to the correct event on docksocial
     $scope.goToEvent = function(event) {
         // if no event given, go to docksocial.com
@@ -25,7 +29,6 @@ app.controller('LandingPageController', ['$scope', '$window', function($scope, $
 
     // save the users application, call cloud code function to send the email
     $scope.saveApplication = function(form) {
-
         if ($scope.applicationInProgress || $scope.applicationSent) {
             return;
         }
