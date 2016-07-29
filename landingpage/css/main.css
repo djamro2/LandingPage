@@ -34,12 +34,54 @@ Author:         Mat Przegietka
 	border-bottom: 1px solid #999!important;
 }
 
+.iconSize img{
+	height:30px;
+	width:30px;
+}
+
+.footerSocial{
+	text-align:center;
+	margin-top:-2em;
+	margin-bottom:-2em;
+}
+
+.footerSocialSize img{
+	height:100px;
+	width:100px;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	padding:10px;
+
+}
+
+.footerSocial li{
+	display:inline-block;
+
+}
+
+.contactFooter{
+	margin-top:-2em;
+	text-align:center;
+}
+
+.dockSocialFooter{
+	text-align:center;
+}
+.dockSocialFooter img{
+	height:55px;
+	width:auto;
+	margin-bottom:-3em;
+}
 .width-200 {
 	width: 200px;
 }
 
 #hired {
 	padding-top: 0!important;
+}
+
+.bringItUp{
+	margin-top:-5px;
 }
 
 .video-item {
@@ -228,6 +270,7 @@ body {
 
 .top-align {
 	margin-top: 1.25rem;
+	display:inline;
 }
 
 .top-align-sm {
@@ -323,9 +366,11 @@ section .sponsors{
 	text-align:center;
 }
 
-.footer{
+.footerLogo{
 	margin-top:3em;
 }
+
+
 
 
 
@@ -664,7 +709,7 @@ section .sponsors{
 .navigation_desktop ul {
     float:right;
     padding:0;
-    margin:0;   
+    margin:0;
 }
 
 .navigation_desktop ul li {
@@ -673,6 +718,7 @@ section .sponsors{
     height:auto;
     margin-left:1rem;
     margin-right:1rem;
+
 }
 
 .navigation_desktop ul li a {
