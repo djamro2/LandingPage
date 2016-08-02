@@ -46,12 +46,11 @@ Author:         Mat Przegietka
 }
 
 .footerSocialSize img{
-	height:100px;
-	width:100px;
+	height:auto;
+	width:3em;
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
-	padding:10px;
-
+	margin-top: -2em;
 }
 
 .footerSocial li{
@@ -68,8 +67,8 @@ Author:         Mat Przegietka
 	text-align:center;
 }
 .dockSocialFooter img{
-	height:55px;
-	width:auto;
+	height:auto;
+	width:9em;
 	margin-bottom:-3em;
 }
 .width-200 {
@@ -369,6 +368,12 @@ section .sponsors{
 .footerLogo{
 	margin-top:3em;
 }
+
+.footerLogo img{
+	width: 8em;
+	height: auto;
+}
+
 
 
 
