@@ -59,21 +59,23 @@ Author:         Mat Przegietka
 .footerSocial{
 	text-align:center;
 	margin-top:-3em;
-	margin-bottom:-3em;
+	margin-bottom:-2em;
 }
 
 .footerSocialSize img{
 	height:auto;
 	width:3em;
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
+
 	margin-top:1em;
 	margin-bottom:1em;
 }
 
 .footerSocialSize img:hover{
-	-webkit-filter: grayscale(0%);
-	filter: grayscale(0%);
+	-webkit-transform:scale(1.1);
+	-moz-transform:scale(1.1);
+	-ms-transform:scale(1.1);
+	-o-transform:scale(1.1);
+	transform:scale(1.1);
 }
 
 .footerSocial ul{
