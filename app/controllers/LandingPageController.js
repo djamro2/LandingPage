@@ -9,6 +9,7 @@ app.controller('LandingPageController', ['$scope', '$window', function($scope, $
 
     $scope.applicationSent = false;
     $scope.applicationInProgress = false;
+    $scope.darkOverlay = false;
 
     // this function is called on start up, get the necessary data here
     vm.init = function(){
@@ -17,6 +18,14 @@ app.controller('LandingPageController', ['$scope', '$window', function($scope, $
 
     $scope.linkTo = function(link) {
         $window.location.href = link;
+    };
+
+    $scope.showDarkOverlay = function() {
+        $scope.darkOverlay = true;
+    };
+
+    $scope.showVisibleContent = function() {
+        $scope.darkOverlay = false;
     };
 
     // route the user to the correct event on docksocial
