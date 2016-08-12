@@ -61,7 +61,6 @@
     	<link href="landingpage/css/owl.transitions.css" rel="stylesheet" media="screen">                        <!-- Owl - Carousel -->
     	<link href="landingpage/css/jquery.flipcountdown.css" rel="stylesheet" media="screen">                        <!-- Owl - Carousel -->
     	<link href="css/custom-styles.css" rel="stylesheet" >
-		<link href="landing_page.css" rel="stylesheet">
 
 		<!-- Modernizer and IE specyfic files -->
 		<script src="landingpage/js/modernizr.custom.js"></script>
@@ -80,7 +79,7 @@
 
     </head>
 
-  	<body ng-controller="LandingPageController" ng-click="showVisibleContent()">
+  	<body ng-controller="LandingPageController">
 
   		<!-- Google Tag Manager -->
 		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M686XQ"
@@ -91,8 +90,6 @@
 		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 		})(window,document,'script','dataLayer','GTM-M686XQ');</script>
 		<!-- End Google Tag Manager -->
-
-		<div class="visible-content" ng-click="showVisibleContent()">
 
 		<!-- Mobile nav -->
     	<div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
@@ -146,7 +143,7 @@
 											</div>
 									</li>
 									<li class="top-align-sm visible-lg visible-md">
-										<div class="social_icon white-words iconSize bringItUp" ng-click="showDarkOverlay(); $event.stopPropagation();">
+										<div class="social_icon white-words iconSize bringItUp" ng-click="linkTo('https://www.instagram.com/nycwelcomeweek/')">
 											<img src="/images/snapchat.png">
 										</div>
 									</li>
@@ -229,7 +226,7 @@
 							</div>
 						</li>
 						<li class="top-align-sm visible-lg visible-md">
-							<div class="social_icon white-words iconSize bringItUp" ng-click="showDarkOverlay(); $event.stopPropagation();">
+							<div class="social_icon white-words iconSize bringItUp" ng-click="linkTo('https://www.instagram.com/nycwelcomeweek/')">
 								<img src="/images/snapchat.png">
 							</div>
 						</li>
@@ -259,8 +256,6 @@
 				<div class="container">
 
 				</div>
-
-				</section>
 
 
 			<!-- More Info #################### -->
@@ -642,57 +637,67 @@
 								<img src="../images/lyftLogo.png">
 							</div>
 						</li>
+						<li>
+							<div ng-click="linkTo('http://shoudout.com/')" style="position:relative;top:-4em;">
+								<img src="../images/Shoudoutlogo.png">
+							</div>
+						</li>
+						<li>
+							<div ng-click="linkTo('https://www.weepo.com/')" style="position:relative;top:-3.5em;">
+								<img src="../images/weepo.png">
+							</div>
+						</li>
+						<li>
+							<div ng-click="linkTo('https://www.babble.com/')">
+								<img src="../images/Logo.png" style="border-radius:25px;width:11.5em;">
+							</div>
+						</li>
+
+
 					</ul>
 				</div>
 			</div>
 		</section><!-- //More info -->
 
 
-			<!--Footer Start-->
-			<section id="footer" class="subsection">
-				<div class="container">
-
-					<div class="row footer">
-						<div class="col-md-12 footerSocial">
-							<ul>
-								<li>
-									<div class="social_icon white-words footerSocialSize" ng-click="linkTo('https://www.instagram.com/nycwelcomeweek/')">
-										<img src="/images/instagram.png">
-									</div>
-								</li>
-								<li>
-									<div class="social_icon white-words footerSocialSize" ng-click="showDarkOverlay(); $event.stopPropagation();">
-										<img src="/images/snapchat.png">
-									</div>
-								</li>
-							</ul>
+				<!--Footer Start-->
+				<section id="footer" class="subsection">
+					<div class="container">
+						<div class="row footer">
+							<div class="col-md-12 footerSocial">
+								<ul>
+									<li>
+										<div class="social_icon white-words footerSocialSize" ng-click="linkTo('https://www.instagram.com/nycwelcomeweek/')">
+											<img src="/images/instagram.png">
+										</div>
+									</li>
+									<li>
+										<div class="social_icon white-words footerSocialSize" ng-click="linkTo('https://www.instagram.com/nycwelcomeweek/')">
+											<img src="/images/snapchat.png">
+										</div>
+									</li>
+								</ul>
+							</div>
 						</div>
-					</div>
-
-					<div class="contactFooter">
-						<div data-icon="&#xe242;">
+						<div class="contactFooter">
+							<div data-icon="&#xe242;">
 							<a href="mailto:info@nycwelcomeweek.com">
 								info@nycwelcomeweek.com
 							</a>
 						</div>
-					</div>
+						<div class="row footer">
+							<div class="dockSocialFooter">
+								<img src="images/logo_horizontal.png"/>
+							</div>
 
-					<div class="row footer">
-						<div class="dockSocialFooter">
-							<img src="images/logo_horizontal.png"/>
 						</div>
+
 					</div>
 
-				</div>
+				</section>
+				 <!--//Footer End-->
 
-			</section>
-			 <!--//Footer End-->
-
-			</div><!-- //preloader -->
-
-		</div>
-
-	</div>
+	</div><!-- //preloader -->
 
 	<!-- JavaScript plugins comes here -->
     <script src="landingpage/js/jquery-2.1.3.min.js"></script>        <!-- jQuery -->
@@ -780,36 +785,26 @@
 
     <!-- Nav Bar show/hide after scrolling -->
 	<script>
-		var $head = $( '#menu_bar' );
-		$( '.menu_bar-waypoint' ).each( function(i) {
-			var $el = $( this ),
-				animClassDown = $el.data( 'animateDown' ),
-				animClassUp = $el.data( 'animateUp' );
+	var $head = $( '#menu_bar' );
+	$( '.menu_bar-waypoint' ).each( function(i) {
+		var $el = $( this ),
+			animClassDown = $el.data( 'animateDown' ),
+			animClassUp = $el.data( 'animateUp' );
 
 
-			$el.waypoint( function( direction ) {
-				if( direction === 'down' && animClassDown ) {
-					$head.attr('class', 'menu_bar ' + animClassDown);
-				}
-				else if( direction === 'up' && animClassUp ){
-					$head.attr('class', 'menu_bar ' + animClassUp);
-				}
-			}, { offset: function() {
-				navbarheight = $("#menu_bar").outerHeight()+1;
-				return navbarheight;
-				}
-			 } );
-		} );
+		$el.waypoint( function( direction ) {
+			if( direction === 'down' && animClassDown ) {
+				$head.attr('class', 'menu_bar ' + animClassDown);
+			}
+			else if( direction === 'up' && animClassUp ){
+				$head.attr('class', 'menu_bar ' + animClassUp);
+			}
+		}, { offset: function() {
+			navbarheight = $("#menu_bar").outerHeight()+1;
+			return navbarheight;
+			}
+		 } );
+	} );
 	</script>
-
-	<!-- dark overlay -->
-	<div ng-class="{darkOverlay: darkOverlay}">
-	</div>
-
-	<!-- snapchat image-->
-	<div ng-if="darkOverlay" class="snapchat-image">
-		<img src="images/snapcode.png" alt="">
-	</div>
-
   </body>
 </html>
