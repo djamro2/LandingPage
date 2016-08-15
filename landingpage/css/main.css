@@ -328,6 +328,7 @@ body {
 	width:100%;
 	margin-top:10px;
 	margin-bottom:10px;
+	text-align:center;
 }
 
 .event-row .col-md-3 img {
@@ -403,6 +404,14 @@ section .sponsors{
 	height: auto;
 }
 
+#events{
+	text-align:center;
+}
+.fit{
+	width:90%;
+	height:auto;
+	text-align:center;
+}
 
 
 
