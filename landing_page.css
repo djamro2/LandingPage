@@ -28,3 +28,8 @@
     width: 540px;
     max-width: 50%;
 }
+
+.wide-button {
+    width: 200px!important;
+    margin-left: -90px!important;
+}
