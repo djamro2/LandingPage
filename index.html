@@ -61,6 +61,7 @@
     	<link href="landingpage/css/owl.transitions.css" rel="stylesheet" media="screen">                        <!-- Owl - Carousel -->
     	<link href="landingpage/css/jquery.flipcountdown.css" rel="stylesheet" media="screen">                        <!-- Owl - Carousel -->
     	<link href="css/custom-styles.css" rel="stylesheet" >
+		<link href="landing_page.css" rel="stylesheet">
 
 		<!-- Modernizer and IE specyfic files -->
 		<script src="landingpage/js/modernizr.custom.js"></script>
@@ -76,7 +77,6 @@
 
 		<!-- Parse -->
 		<script type="text/javascript" src="js/parse.js"></script>
-
     </head>
 
   	<body ng-controller="LandingPageController">
@@ -173,8 +173,10 @@
 									<div class="row jumbotronButtons">
 										<div class="col-sm-2"></div>
 										<div class="col-sm-4">
-											<div ng-click="linkTo('https://www.docksocial.com/events/#/GwJYeqI3dU')">
-													<button class="btn waves-effect waves-light subscribe-submit width-200">Get Tickets!</button>
+											<div>
+												<a href="#getTickets" class="opacity-fix">
+													<button class="btn waves-effect waves-light subscribe-submit width-200">  Get Tickets! </button>
+												</a>
 											</div>
 										</div>
 										<div class="col-sm-4">
@@ -433,8 +435,12 @@
 					<div class="row align-center event-row" id="r1g">
 						<div class="col-md-3" >
 							<h3>Sunday August 28th</h3>
-							<div class="img-container fit">
-								<img src="images/welcomeweekTBA.png"/>
+							<div class="img-container fit" ng-click="linkTo('https://www.docksocial.com/events/#/TcpTlgXMKx')">
+								<!--
+								<span>Blacklight Party</span>
+								-->
+								<img src="images/grovesunday.jpg" />
+								<button class="btn waves-effect waves-light subscribe-submit wide-button">Get Tickets</button>
 							</div>
 						</div>
 						<div class="col-md-3" >
@@ -444,14 +450,17 @@
 								<span>Blacklight Party</span>
 								-->
 								<img src="images/welcomeWeek7.jpg" />
-								<button class="btn waves-effect waves-light subscribe-submit buttonFix">Get Tickets</button>
+								<button class="btn waves-effect waves-light subscribe-submit wide-button">Get Tickets</button>
 							</div>
 						</div>
-
-						<div class="col-md-3">
+						<div class="col-md-3" >
 							<h3>Tuesday August 30th</h3>
-							<div class="img-container fit">
-								<img src="images/welcomeweekTBA.png"/>
+							<div class="img-container fit" ng-click="linkTo('https://www.docksocial.com/events/#/Dyu3IGygez')">
+								<!--
+								<span>Blacklight Party</span>
+								-->
+								<img src="images/haustues.jpg" />
+								<button class="btn waves-effect waves-light subscribe-submit wide-button">Get Tickets</button>
 							</div>
 						</div>
 						<div class="col-md-3" >
@@ -461,7 +470,7 @@
 								<span>Blacklight Party</span>
 								-->
 								<img src="images/welcomeWeek5.jpg" />
-								<button class="btn waves-effect waves-light subscribe-submit buttonFix">Get Tickets</button>
+								<button class="btn waves-effect waves-light subscribe-submit wide-button">Get Tickets</button>
 							</div>
 						</div>
 					</div>
@@ -502,7 +511,7 @@
 					<br>
 
 					<div class="row getTickets">
-						<h1 class="all-caps fs-md spacing-md">Fashion Week Events</h1>
+						<h1 class="all-caps fs-md spacing-md">Pre Welcome Week </h1>
 					</div>
 
 					<div class="row align-center event-row" id="r3g">
@@ -514,7 +523,7 @@
 								<span>Blacklight Party</span>
 								-->
 								<img src="images/fashionWeekMonday.jpg" />
-								<button class="btn waves-effect waves-light subscribe-submit">Get Tickets</button>
+								<button class="btn waves-effect waves-light subscribe-submit wide-button">Get Tickets</button>
 							</div>
 						</div>
 						<div class="col-md-3" >
@@ -524,7 +533,7 @@
 								<span>Blacklight Party</span>
 								-->
 								<img src="images/fashionWeekTuesday.jpg" />
-								<button class="btn waves-effect waves-light subscribe-submit">Get Tickets</button>
+								<button class="btn waves-effect waves-light subscribe-submit wide-button">Get Tickets</button>
 							</div>
 						</div>
 						<div class="col-sm-3"></div>
